@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <div class="gallery-container">
+        <h1 class="gallery-heading">Explore Beautiful Moments</h1>
+        <div class="folders">
+            <div class="folder" data-folder="nature-wildlife">
+                <div class="folder-content">Nature and Wildlife</div>
+            </div>
+            <div class="folder" data-folder="cultural-heritage">
+                <div class="folder-content">Cultural Heritage</div>
+            </div>
+            <div class="folder" data-folder="travel-adventure">
+                <div class="folder-content">Travel & Adventure</div>
+            </div>
+            <div class="folder" data-folder="underwater-world">
+                <div class="folder-content">Underwater World</div>
+            </div>
+            <div class="folder" data-folder="macro-photography">
+                <div class="folder-content">Macro Photography</div>
+            </div>
+            <div class="folder" data-folder="black-white">
+                <div class="folder-content">Black & White</div>
+            </div>
+        </div>
+        
+        <div id="images-container" class="images-container"></div>
+        <button id="back-button" onclick="showFolders()">⬅ Back</button>
+
+    </div>
+
+    <div id="image-modal" class="image-modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <button class="prev" onclick="showPrevImage()">&#10094;</button>
+        <img class="modal-content" id="modal-img">
+        <button class="next" onclick="showNextImage()">&#10095;</button>
+      
+    </div>
+    
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
